@@ -34,6 +34,8 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopBarPanel = new System.Windows.Forms.Panel();
+            this.ShowPictureButton = new System.Windows.Forms.Button();
+            this.GetIDRichTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,11 +88,31 @@
             this.TopBarPanel.Size = new System.Drawing.Size(443, 36);
             this.TopBarPanel.TabIndex = 4;
             // 
+            // ShowPictureButton
+            // 
+            this.ShowPictureButton.Location = new System.Drawing.Point(362, 139);
+            this.ShowPictureButton.Name = "ShowPictureButton";
+            this.ShowPictureButton.Size = new System.Drawing.Size(75, 23);
+            this.ShowPictureButton.TabIndex = 5;
+            this.ShowPictureButton.Text = "Show Pic";
+            this.ShowPictureButton.UseVisualStyleBackColor = true;
+            this.ShowPictureButton.Click += new System.EventHandler(this.ShowPictureButton_Click);
+            // 
+            // GetIDRichTextBox
+            // 
+            this.GetIDRichTextBox.Location = new System.Drawing.Point(362, 110);
+            this.GetIDRichTextBox.Name = "GetIDRichTextBox";
+            this.GetIDRichTextBox.Size = new System.Drawing.Size(75, 23);
+            this.GetIDRichTextBox.TabIndex = 6;
+            this.GetIDRichTextBox.Text = "";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 216);
+            this.Controls.Add(this.GetIDRichTextBox);
+            this.Controls.Add(this.ShowPictureButton);
             this.Controls.Add(this.TopBarPanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnUpload);
@@ -113,6 +135,8 @@
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel TopBarPanel;
+        private System.Windows.Forms.Button ShowPictureButton;
+        private System.Windows.Forms.RichTextBox GetIDRichTextBox;
     }
 }
 
