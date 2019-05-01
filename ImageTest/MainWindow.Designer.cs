@@ -45,6 +45,7 @@
             // 
             // btnSelect
             // 
+            this.btnSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSelect.Location = new System.Drawing.Point(362, 52);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(75, 23);
@@ -55,6 +56,8 @@
             // 
             // rtbFileName
             // 
+            this.rtbFileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbFileName.Location = new System.Drawing.Point(12, 52);
             this.rtbFileName.Name = "rtbFileName";
             this.rtbFileName.Size = new System.Drawing.Size(344, 23);
@@ -67,6 +70,7 @@
             // 
             // btnUpload
             // 
+            this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpload.Location = new System.Drawing.Point(362, 81);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
@@ -77,6 +81,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(12, 110);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(344, 94);
@@ -86,7 +93,7 @@
             // 
             // TopBarPanel
             // 
-            this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopBarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TopBarPanel.Location = new System.Drawing.Point(0, 0);
             this.TopBarPanel.Name = "TopBarPanel";
             this.TopBarPanel.Size = new System.Drawing.Size(443, 36);
@@ -94,6 +101,7 @@
             // 
             // ShowPictureButton
             // 
+            this.ShowPictureButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowPictureButton.Location = new System.Drawing.Point(362, 139);
             this.ShowPictureButton.Name = "ShowPictureButton";
             this.ShowPictureButton.Size = new System.Drawing.Size(75, 23);
@@ -104,6 +112,7 @@
             // 
             // GetIDRichTextBox
             // 
+            this.GetIDRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GetIDRichTextBox.Location = new System.Drawing.Point(362, 110);
             this.GetIDRichTextBox.Name = "GetIDRichTextBox";
             this.GetIDRichTextBox.Size = new System.Drawing.Size(75, 23);
@@ -160,7 +169,6 @@
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.rtbFileName);
             this.Controls.Add(this.btnSelect);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainWindow";
             this.Text = "Picture Test";
             this.Load += new System.EventHandler(this.MainWindow_Load);

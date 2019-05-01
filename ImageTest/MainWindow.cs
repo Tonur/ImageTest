@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Reflection;
 
 namespace ImageTest
 {
@@ -24,7 +25,7 @@ namespace ImageTest
             openFileDialog1.ShowDialog();
             pictureBox1.ImageLocation = openFileDialog1.FileName;
             rtbFileName.Text = openFileDialog1.FileName;
-            
+
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -48,13 +49,20 @@ namespace ImageTest
             myControl.Dock = DockStyle.Top;
         }
 
-        
+
 
         private void ShowPictureButton_Click(object sender, EventArgs e)
         {
             byte[] photo = DataAccess.GetPhoto(int.Parse(GetIDRichTextBox.Text));
-
-            pictureBox1.Image = ConvertBinaryArrayToImage(photo);
+            if (photo != null)
+            {
+                pictureBox1.Image = ConvertBinaryArrayToImage(photo);
+            }
+            else
+            {
+                
+                pictureBox1.Image = Properties.Resources.FuckYou;
+            }
         }
 
         private Image ConvertBinaryArrayToImage(byte[] photo)

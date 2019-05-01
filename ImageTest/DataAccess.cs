@@ -9,9 +9,9 @@ namespace ImageTest
 {
     class DataAccess
     {
-        public static byte[] GetPhoto(int photoID)
+        public static byte[] GetPhoto(int caseNr)
         {
-            if (!DoesPhotoExist(photoID))
+            if (!DoesPhotoExist(caseNr))
             {
                 return default(byte[]);
             }
@@ -20,8 +20,8 @@ namespace ImageTest
             {
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "SELECT BLOBData FROM BLOBTest WHERE TestID = @photoID";
-                    command.Parameters.AddWithValue("@photoID", photoID);
+                    command.CommandText = "SELECT dataOfFile FROM files WHERE caseNr = @caseNr";
+                    command.Parameters.AddWithValue("@caseNr", caseNr);
                     command.Connection = connection;
                     connection.Open();
                     return (byte[])command.ExecuteScalar();
@@ -59,14 +59,14 @@ namespace ImageTest
             return retval;
         }
 
-        private static bool DoesPhotoExist(int photoID)
+        private static bool DoesPhotoExist(int caseNr)
         {
             using (SqlConnection connection = GetConnection())
             {
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "IF EXISTS(SELECT * FROM BLOBTest WHERE TestID = @photoID) BEGIN SELECT 1 END ELSE SELECT 0";
-                    command.Parameters.AddWithValue("@photoID", photoID);
+                    command.CommandText = "IF EXISTS(SELECT * FROM files WHERE caseNr = @caseNr) BEGIN SELECT 1 END ELSE SELECT 0";
+                    command.Parameters.AddWithValue("@caseNr", caseNr);
                     command.Connection = connection;
                     connection.Open();
                     return (int)command.ExecuteScalar() == 1;
