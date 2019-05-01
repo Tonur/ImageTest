@@ -30,7 +30,7 @@ namespace ImageTest
         private void btnUpload_Click(object sender, EventArgs e)
         {
             byte[] photo = GetPhotoFromFile(rtbFileName.Text);
-            DataAccess.UploadPhoto(Path.GetFileName(rtbFileName.Text), photo);
+            DataAccess.UploadPhoto(int.Parse(CaseIDRtb.Text), Path.GetFileName(rtbFileName.Text), ExtentionRtb.Text, photo);
         }
 
         private byte[] GetPhotoFromFile(string fileName)

@@ -25,9 +25,9 @@ namespace ImageTest.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:tonur.database.windows.net;Initial Catalog=EAL;Persist Security Info=F" +
-            "alse;User ID=SpecOpticAps;Password=Ole12345;MultipleActiveResultSets=False;Encry" +
-            "pt=True;TrustServerCertificate=False;Connection Timeout=30;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:myservertobbe.database.windows.net;Initial Catalog=MyDatabaseTobbe;Per" +
+            "sist Security Info=False;User ID=GuestLogin;Password=Zxasqw12;MultipleActiveResu" +
+            "ltSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")]
         public string SQLConnection {
             get {
                 return ((string)(this["SQLConnection"]));

@@ -29,16 +29,21 @@ namespace ImageTest
             }
         }
 
-        internal static void UploadPhoto(string fileName, byte[] photo)
+        internal static void UploadPhoto(int caseID, string fileName, string extention, byte[] photo)
         {
+
+            string[] fileNames =  fileName.Split('.');
+
             using (SqlConnection connection = GetConnection())
             {
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO BLOBTest (BLOBName, BLOBData) VALUES (@BLOBName, @BLOBData)";
-                    command.Parameters.AddWithValue("@BLOBName", fileName);
-                    command.Parameters.Add(GetImageSqlParameter("@BLOBData", photo));
+                    command.CommandText = "INSERT INTO files VALUES (@caseNr, @nameOfFile, @extOfFile, @dataOfFile)";
+                    command.Parameters.AddWithValue("@caseNr", caseID);
+                    command.Parameters.AddWithValue("@nameOfFile", fileNames[0]);
+                    command.Parameters.AddWithValue("@extOfFile", extention);
+                    command.Parameters.Add(GetImageSqlParameter("@dataOfFile", photo));
                     connection.Open();
                     command.ExecuteNonQuery();
                 }

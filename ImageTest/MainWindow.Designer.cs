@@ -36,6 +36,10 @@
             this.TopBarPanel = new System.Windows.Forms.Panel();
             this.ShowPictureButton = new System.Windows.Forms.Button();
             this.GetIDRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.CaseIDRtb = new System.Windows.Forms.RichTextBox();
+            this.ExtentionRtb = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,9 +77,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 110);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(344, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -106,11 +110,49 @@
             this.GetIDRichTextBox.TabIndex = 6;
             this.GetIDRichTextBox.Text = "";
             // 
+            // CaseIDRtb
+            // 
+            this.CaseIDRtb.Location = new System.Drawing.Point(63, 81);
+            this.CaseIDRtb.Name = "CaseIDRtb";
+            this.CaseIDRtb.Size = new System.Drawing.Size(55, 23);
+            this.CaseIDRtb.TabIndex = 7;
+            this.CaseIDRtb.Text = "";
+            // 
+            // ExtentionRtb
+            // 
+            this.ExtentionRtb.Location = new System.Drawing.Point(184, 81);
+            this.ExtentionRtb.Name = "ExtentionRtb";
+            this.ExtentionRtb.Size = new System.Drawing.Size(55, 23);
+            this.ExtentionRtb.TabIndex = 8;
+            this.ExtentionRtb.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "CaseID:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(124, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Extention:";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 216);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ExtentionRtb);
+            this.Controls.Add(this.CaseIDRtb);
             this.Controls.Add(this.GetIDRichTextBox);
             this.Controls.Add(this.ShowPictureButton);
             this.Controls.Add(this.TopBarPanel);
@@ -124,6 +166,7 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,6 +180,10 @@
         private System.Windows.Forms.Panel TopBarPanel;
         private System.Windows.Forms.Button ShowPictureButton;
         private System.Windows.Forms.RichTextBox GetIDRichTextBox;
+        private System.Windows.Forms.RichTextBox CaseIDRtb;
+        private System.Windows.Forms.RichTextBox ExtentionRtb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
